@@ -1,0 +1,14 @@
+# This program checks a given list and accepts a target sum and returns two numbers in the list that add to the given number
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        for x in range(len(nums)): # Loop that checks each index
+            for y in range(x+1, len(nums)): # Loop that checks each other index
+                check = nums[x]+nums[y] 
+                if check==target:
+                    return [x, y]
